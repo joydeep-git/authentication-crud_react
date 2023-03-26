@@ -1,0 +1,13 @@
+.About{
+    font-size: 1.3rem;
+    text-align: left;
+    width: 90%;
+    margin: auto;
+    padding: 2rem;
+}
+.About h1{
+    font-size: 2.5rem;
+}
+.About p{
+    font-size: 1.3rem;
+}
