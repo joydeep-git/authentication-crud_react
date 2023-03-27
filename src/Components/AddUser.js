@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from 'uuid';
 
+import "../CSS/Registration.css";
+
 import { UserDataStorage } from '../Data/UserDataStorage';
 
 function AddUser() {
@@ -74,11 +76,11 @@ function AddUser() {
             let uniqueId = UUID;
 
             UserDataStorage.push({
-                id: uniqueId,
-                name: userData.name,
-                number: userData.number,
-                email: userData.email,
-                age: userData.age,
+                Id: uniqueId,
+                Name: userData.name,
+                Number: userData.number,
+                Email: userData.email,
+                Age: userData.age,
             })
             redirect("/UserData");
         }};

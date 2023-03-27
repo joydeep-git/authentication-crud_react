@@ -1,11 +1,11 @@
-export const UserDataStorage = [
-    { id:1 , name: "Joydeep Das", number: "6290589624", email: "joydeep19@protonmail.com", age: "22" },
+export const UserDataStorage = [];
 
-    { id:2 , name: "Srinjay Samanta", number: "9876543210", email: "srinjay@email.com", age: "23"},
+// { Id:1 , Name: "Joydeep Das", Number: "6290589624", Email: "joydeep19@protonmail.com", Age: "22" },
 
-    { id:3 , name: "Ankit Pal", number: "8794561230", email: "ankit@email.com", age: "24"},
+// { Id:2 , Name: "Srinjay Samanta", Number: "9876543210", Email: "srinjay@email.com", Age: "23"},
 
-    { id:4 , name: "Rupam Das", number: "7984561230", email: "rupam@email.com", age: "21"},
+// { Id:3 , Name: "Ankit Pal", Number: "8794561230", Email: "ankit@email.com", Age: "24"},
 
-    { id:5 , name: "Arkadeb Chattejee", number: "6987453210", email: "arkadeb@email.com", age: "22"},
-];
+// { Id:4 , Name: "Rupam Das", Number: "7984561230", Email: "rupam@email.com", Age: "21"},
+
+// { Id:5 , Name: "Arkadeb Chattejee", Number: "6987453210", Email: "arkadeb@email.com", Age: "22"},

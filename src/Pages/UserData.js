@@ -20,17 +20,28 @@ function UserData() {
     const currentUser = userRegData.find(user => user.email === currentUserEmail);
     const currentUserName = currentUser.name;
 
-    const handleDelete = (id) => {
+    const handleEdit = (Id, Name, Number, Email, Age) =>{
+
+        localStorage.setItem("Id", Id);
+        localStorage.setItem("Name", Name);
+        localStorage.setItem("Number", Number);
+        localStorage.setItem("Email", Email);
+        localStorage.setItem("Age", Age);
+
+        redirect("/EditUserData");
+    }
+
+    const handleDelete = (Id) => {
 
         let index = UserDataStorage.map(
             function (user) {
-                return user.id
+                return user.Id
             }
-        ).indexOf(id)
+        ).indexOf(Id)
 
-        UserDataStorage.splice(index, 1)
+        UserDataStorage.splice(index, 1);
 
-        redirect("/UserData")
+        redirect("/UserData");
     }
 
     return (
@@ -65,15 +76,14 @@ function UserData() {
                     <tbody>
                         {UserDataStorage.map((user, index) => (
                             <tr key={index}>
-                                <td>{user.name}</td>
-                                <td>{user.number}</td>
-                                <td>{user.email}</td>
-                                <td>{user.age}</td>
+                                <td>{user.Name}</td>
+                                <td>{user.Number}</td>
+                                <td>{user.Email}</td>
+                                <td>{user.Age}</td>
 
                                 <td className='actions'>
-                                    <Link to="/EditUserData">
-                                        <button>Edit</button>
-                                    </Link>
+
+                                    <button onClick={() => handleEdit( user.Id,user.Name, user.Number, user.Email, user.Age) }>Edit</button>
                                     <button onClick={handleDelete}>Delete</button>
                                 </td>
                             </tr>
