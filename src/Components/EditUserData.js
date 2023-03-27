@@ -6,10 +6,6 @@ function EditUserData() {
 
     const redirect = useNavigate();
 
-    const userDataNavigate = () => {
-        redirect("/UserData")
-    }
-
     return (
             <div className="Registration">
             <form >
@@ -46,8 +42,7 @@ function EditUserData() {
 
 export default EditUserData;
 
-// import React, { useState } from 'react';
-// import { useNavigate } from "react-router-dom";
+
 // import { v4 as uuidv4 } from 'uuid';
 
 // import { UserDataStorage } from '../Data/UserDataStorage';
