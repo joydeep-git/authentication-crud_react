@@ -1,23 +1,23 @@
-import React, { useState} from 'react';
-import { Link , useNavigate } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link, useNavigate } from "react-router-dom";
 import "../CSS/Registration.css";
 
 function Login() {
 
     const redirect = useNavigate();
 
-    const [ userLoginData, setUserLoginData ] = useState({
+    const [userLoginData, setUserLoginData] = useState({
         email: "",
         password: "",
     })
 
-    const handleChange = (e) =>{
-        const {name, value} = e.target;
+    const handleChange = (e) => {
+        const { name, value } = e.target;
 
-        setUserLoginData(() =>{
-            return{
+        setUserLoginData(() => {
+            return {
                 ...userLoginData,
-                [name]:value
+                [name]: value
             }
         })
     };
@@ -25,32 +25,36 @@ function Login() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const {email, password} = userLoginData;
+        const { email, password } = userLoginData;
 
         const alert = document.getElementById("alert");
 
         const registeredData = localStorage.getItem("ACCOUNTS");
 
-        if(userLoginData.email === ""){
+        if (userLoginData.email === "") {
             alert.innerText = "enter email";
             alert.className = "alert"
-        }else if(userLoginData.password === ""){
+        } else if (userLoginData.password === "") {
             alert.innerText = "enter password";
             alert.className = "alert";
-        }else{
+        } else {
             alert.innerText = "Login";
             alert.className = "reg";
 
             const userRegData = JSON.parse(registeredData);
 
-            const userData = userRegData.filter((element, indexNum) =>{
+            const userData = userRegData.filter((element, indexNum) => {
                 return element.email === email && element.password === password
             });
 
-            if(userData.length === 0){
+            ////Storing email id in localStorage
+            const userEmail = document.getElementById("email").value;
+            localStorage.setItem("currentUserEmail", userEmail);
+
+            if (userData.length === 0) {
                 alert.innerText = "INVALID DETAILS";
                 alert.className = "alert";
-            }else{
+            } else {
                 redirect("/UserData")
             }
         }

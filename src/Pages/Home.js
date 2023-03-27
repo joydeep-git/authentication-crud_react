@@ -8,7 +8,7 @@ function Home() {
 
             <div>
                 <h1>User Authentication & CRUD operations</h1>
-                <p>To know more go to<Link to="/About" className='link'>About page</Link> or do <Link to="Registration" className='link'>Register</Link></p>
+                <p>To know more about this project<Link to="/About" className='link'>CLICK HERE</Link> <br /> or <Link to="Registration" className='link'>REGISTER</Link></p>
             </div>
         </div>
     )

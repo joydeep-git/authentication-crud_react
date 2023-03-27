@@ -10,6 +10,8 @@ import Contact from "./Pages/Contact";
 import UserData from "./Pages/UserData";
 
 import Header from "./Components/Header";
+import EditUserData from "./Components/EditUserData";
+import AddUser from "./Components/AddUser";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
         <Route path="/Registration" element={<Registration />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/UserData" element={<UserData />} />
+        <Route path="/EditUserData" element={<EditUserData />}/>
+        <Route path="/AddUser" element={<AddUser />}/>
       </Routes>
     </Routers>
   )

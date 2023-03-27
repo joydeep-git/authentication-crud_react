@@ -1,0 +1,62 @@
+.acc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.accDetail {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.accDetail span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.accDetail h1 {
+    font-size: 2rem;
+}
+
+.acc button {
+    margin: 0;
+    padding: 0.2rem 0.5rem;
+}
+
+.table{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.addbtn{
+text-align: center;
+margin: 1rem;
+}
+
+.actions{
+    display: flex;
+    gap: 1rem;
+}
+
+table{
+    margin: 0 auto;
+}
+table,
+th,
+td {
+    border: 1px solid;
+    padding: 10px;
+    text-align: center;
+}
