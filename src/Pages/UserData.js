@@ -6,7 +6,6 @@ import "../CSS/UserData.css";
 import { FaUser } from "react-icons/fa";
 
 function UserData() {
-
     const redirect = useNavigate();
 
     const handleLogout = () => {
@@ -20,7 +19,7 @@ function UserData() {
     const currentUser = userRegData.find(user => user.email === currentUserEmail);
     const currentUserName = currentUser.name;
 
-    const handleEdit = (Id, Name, Number, Email, Age) =>{
+    const handleEdit = (Id, Name, Number, Email, Age) => {
 
         localStorage.setItem("Id", Id);
         localStorage.setItem("Name", Name);
@@ -46,53 +45,52 @@ function UserData() {
 
     return (
         <div className='UserData'>
-
             <div className='acc'>
                 <div className='accDetail'>
                     <span><FaUser /></span>
                     <h1>{currentUserName}</h1>
                 </div>
-
                 <button onClick={handleLogout}>Logout</button>
             </div>
-
             <div className='addbtn'>
                 <Link to="/AddUser">
                     <button>Add User</button>
                 </Link>
             </div>
-
             <div className='table'>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Number</th>
-                            <th>Email</th>
-                            <th>Age</th>
-                            <th>actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {UserDataStorage.map((user, index) => (
-                            <tr key={index}>
-                                <td>{user.Name}</td>
-                                <td>{user.Number}</td>
-                                <td>{user.Email}</td>
-                                <td>{user.Age}</td>
-
-                                <td className='actions'>
-
-                                    <button onClick={() => handleEdit( user.Id,user.Name, user.Number, user.Email, user.Age) }>Edit</button>
-                                    <button onClick={handleDelete}>Delete</button>
-                                </td>
+                {UserDataStorage.length === 0 ? (
+                    <div className="no-data-message">Add user details</div>
+                ) : (
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Number</th>
+                                <th>Email</th>
+                                <th>Age</th>
+                                <th>actions</th>
                             </tr>
-                        ))}
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            {UserDataStorage.map((user, index) => (
+                                <tr key={index}>
+                                    <td>{user.Name}</td>
+                                    <td>{user.Number}</td>
+                                    <td>{user.Email}</td>
+                                    <td>{user.Age}</td>
+                                    <td className='actions'>
+                                        <button onClick={() => handleEdit(user.Id, user.Name, user.Number, user.Email, user.Age)}>Edit</button>
+                                        <button onClick={() => handleDelete(user.Id)}>Delete</button>
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                )}
             </div>
         </div>
     );
 }
+
 
 export default UserData;

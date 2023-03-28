@@ -34,29 +34,38 @@
     padding: 0.2rem 0.5rem;
 }
 
-.table{
+.table {
     display: flex;
     width: 100%;
     margin: 0 auto;
 }
 
-.addbtn{
-text-align: center;
-margin: 1rem;
+.addbtn {
+    text-align: center;
+    margin: 1rem;
 }
 
-.actions{
+.actions {
     display: flex;
     gap: 1rem;
 }
 
-table{
+table {
     margin: 0 auto;
 }
+
+table thead tr {
+    width: 100%;
+}
+
+th {
+    content: " ";
+    width: 100%;
+}
+
 table,
 th,
 td {
     border: 1px solid;
     padding: 10px;
-    text-align: center;
 }
