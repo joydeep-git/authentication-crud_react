@@ -54,7 +54,7 @@ function UserData() {
             </div>
             <div className='addbtn'>
                 <Link to="/AddUser">
-                    <button>Add User</button>
+                    <button>Add Contact</button>
                 </Link>
             </div>
             <div className='table'>

@@ -90,7 +90,7 @@ function AddUser() {
         <div className="Registration">
             <form onSubmit={handleSubmit}>
 
-                <h1 id='alert' className='reg'>Add User</h1>
+                <h1 id='alert' className='reg'>Add Contact</h1>
 
                 <div className='data-input'>
                     <label htmlFor="name">Enter Name</label>
