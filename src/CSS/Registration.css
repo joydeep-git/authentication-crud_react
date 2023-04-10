@@ -45,7 +45,7 @@ input {
     border-radius: 5px;
     font-size: 1rem;
     padding: 0.2rem 0.6rem;
-    width: 100%;
+    width:max-content;
     max-width: 300px;
 }
 
